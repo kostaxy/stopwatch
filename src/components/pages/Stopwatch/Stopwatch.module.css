@@ -1,0 +1,14 @@
+.ButtonsBar{
+    display: flex;
+    justify-content: center;
+}
+
+.DigitalClockFace__wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.DigitalClockFace{
+    font-size: 150px;
+    color: #fff;
+}

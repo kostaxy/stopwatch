@@ -1,0 +1,18 @@
+.Button {
+    margin: 10px;
+    display: block;
+    text-align: center;
+    width: 150px;
+    font-size: 36px;
+    cursor: pointer;
+
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    -khtml-user-select: none; /* KHTML browsers (наподобие Konqueror) */
+    -webkit-user-select: none; /* Chrome, Safari и Opera */
+    -webkit-touch-callout: none; /* Отключить вызовы в Android и iOS */
+}
+
+.Button:hover{
+    color:  #fff;
+}

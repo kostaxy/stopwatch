@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #c3c3c3;
+    font-family: 'Roboto Mono','PoppinsRegular', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body, #app, #app>div {
+    height: 100%;
+    background: -webkit-linear-gradient(360deg,#383836 10%,#4a4a4a 360%); background: linear-gradient(360deg,#383836 10%,#4a4a4a 360%)
+}
+
+#root {
+    height: 100%;
+}
