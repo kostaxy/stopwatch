@@ -1,4 +1,5 @@
 .ButtonsBar{
+    color: #c3c3c3;
     display: flex;
     justify-content: center;
 }
@@ -9,6 +10,6 @@
 }
 
 .DigitalClockFace{
-    font-size: 150px;
+    font-size: 210px;
     color: #fff;
 }

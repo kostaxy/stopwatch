@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Button from '../../../UI/Button/Button';
 import ButtonsBar from '../../ButtonsBar';
+import LapsList from '../../LapsList/LapsList';
 import classes from './Stopwatch.module.css'
 
 const Stopwatch = () => {
@@ -12,6 +13,7 @@ const Stopwatch = () => {
         minutes: 0
     });
     const [startTime, setStartTime] = useState(null);
+    const [laps, setLaps] = useState([]);
 
     useEffect(() => {
 
@@ -42,6 +44,16 @@ const Stopwatch = () => {
         };
     });
 
+    const addLap = () => {
+        if (startTime) {
+            setLaps([...laps, time])
+        }
+    }
+
+    const clearLaps = () => {
+        setLaps([])
+    }
+
     const changeIsRunningState = () => {
         if (!startTime) {
             setStartTime(Date.now())
@@ -66,6 +78,7 @@ const Stopwatch = () => {
             seconds: 0,
             minutes: 0
         })
+        clearLaps()
     }
 
     const runOrStop = () => {
@@ -90,6 +103,14 @@ const Stopwatch = () => {
                 }
             </Button>
             <Button onClick={resetStopwatch}>Reset</Button>
+            <Button onClick={addLap}>+Lap</Button>
+            <Button onClick={clearLaps}>ClearLaps</Button>
+        </div>
+        <div style={{ textAlign: 'center' }}>
+            {(laps.length > 0) 
+                ? <LapsList laps={laps}></LapsList>
+                : <div></div>
+            }
         </div>
 
     </div>;
