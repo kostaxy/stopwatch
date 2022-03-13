@@ -73,12 +73,12 @@ const Stopwatch = () => {
             changeIsRunningState()
         }
         setStartTime(null)
+        clearLaps()
         setTime({
             milliseconds: 0,
             seconds: 0,
             minutes: 0
         })
-        clearLaps()
     }
 
     const runOrStop = () => {
