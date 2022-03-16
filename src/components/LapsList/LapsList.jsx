@@ -1,9 +1,10 @@
-import { Table } from 'antd';
+import { Button, Table } from 'antd';
 import React from 'react';
 import classes from './LapsList.module.css'
-import 'antd/dist/antd.dark.css';
 import SimpleBar from 'simplebar-react';
+import 'antd/dist/antd.dark.css';
 import 'simplebar/dist/simplebar.min.css';
+import { SaveOutlined } from '@ant-design/icons';
 
 
 const LapsList = ({ laps }) => {
@@ -74,9 +75,24 @@ const LapsList = ({ laps }) => {
         return window.innerHeight - 500
     }
 
+    const saveLaps = () => {
+        let text;
+        let lapsSetName = prompt("Enter the name of the laps set");
+        if (lapsSetName == null || lapsSetName == "") {
+            text = "Ooops, wrong name. Try save again";
+        } else {
+            text = lapsSetName + ' saved';
+        }
+        alert(text)
+    }
 
     return (
         <div className={classes.LapsTab}>
+            <div >
+                <Button className={classes.SaveLapsBtn} onClick={saveLaps} icon={<SaveOutlined />}>
+                    Save laps
+                </Button>
+            </div>
             <SimpleBar
                 style={{ maxHeight: calculateHeightLapsTab() }}
             >

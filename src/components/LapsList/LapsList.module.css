@@ -1,4 +1,10 @@
 .LapsTab{
     width: 600px;
     margin: auto;
+    flex-flow: column;
+    display: flex;
+}
+.SaveLapsBtn {
+    float: right;
+    margin-bottom: 10px;
 }
