@@ -9,7 +9,26 @@
     justify-content: center;
 }
 
-.DigitalClockFace{
+/* .DigitalClockFace{
     font-size: 210px;
     color: #fff;
+} */
+
+@media (max-width: 920px){
+    .DigitalClockFace{
+        font-size: 150px;
+        color: #fff;
+    }
+}
+@media (min-width: 920px) {
+    .DigitalClockFace{
+        font-size: 210px;
+        color: #fff;
+    }
+}
+@media (max-width: 690px) {
+    .DigitalClockFace{
+        font-size: 110px;
+        color: #fff;
+    }
 }

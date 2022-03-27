@@ -5,6 +5,7 @@ import SimpleBar from 'simplebar-react';
 import 'antd/dist/antd.dark.css';
 import 'simplebar/dist/simplebar.min.css';
 import { SaveOutlined } from '@ant-design/icons';
+import { getElementError } from '@testing-library/react';
 
 
 const LapsList = ({ laps }) => {
@@ -72,7 +73,8 @@ const LapsList = ({ laps }) => {
     // const data = laps
 
     const calculateHeightLapsTab = () => {
-        return window.innerHeight - 500
+        console.log(document.getElementById('Stopwatch').offsetHeight, document.getElementById('Stopwatch').offsetHeight, window.innerHeight - document.getElementById('ButtonsBar').offsetHeight - document.getElementById('Stopwatch').offsetHeight)
+        return window.innerHeight - document.getElementById('Stopwatch').offsetHeight - document.getElementById('ButtonsBar').offsetHeight
     }
 
     const saveLaps = () => {

@@ -87,14 +87,14 @@ const Stopwatch = () => {
 
 
     return <div>
-        <div className={classes.DigitalClockFace__wrapper}>
+        <div className={classes.DigitalClockFace__wrapper} id='Stopwatch'>
             <span className={classes.DigitalClockFace}>
                 {('00' + time.minutes).slice(-2)}
                 :{('00' + time.seconds).slice(-2)}
                 :{('000' + time.milliseconds).slice(-3)}
             </span>
         </div>
-        <div className={classes.ButtonsBar}>
+        <div className={classes.ButtonsBar} id='ButtonsBar'>
             <Button onClick={runOrStop}>
                 {
                     isRunning

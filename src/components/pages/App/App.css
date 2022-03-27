@@ -14,3 +14,10 @@ html, body, #app, #app>div {
 #root {
     height: 100%;
 }
+
+@media (max-width: 920px){
+    .DigitalClockFace{
+        font-size: 150px;
+        color: #fff;
+    }
+}
