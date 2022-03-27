@@ -1,0 +1,17 @@
+.Navbar {
+    display: flex;
+    color: #fff;
+    font-size: 32px;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.Navbar > a {
+    color: #fff;
+    margin: 25px 10px 0 10px;
+    text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+    transition: text-decoration-color 300ms;
+}
+.Navbar > a:hover{
+    text-decoration-color: rgb(255, 255, 255);
+}

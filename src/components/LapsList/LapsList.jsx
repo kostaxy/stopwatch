@@ -73,8 +73,7 @@ const LapsList = ({ laps }) => {
     // const data = laps
 
     const calculateHeightLapsTab = () => {
-        console.log(document.getElementById('Stopwatch').offsetHeight, document.getElementById('Stopwatch').offsetHeight, window.innerHeight - document.getElementById('ButtonsBar').offsetHeight - document.getElementById('Stopwatch').offsetHeight)
-        return window.innerHeight - document.getElementById('Stopwatch').offsetHeight - document.getElementById('ButtonsBar').offsetHeight
+        return window.innerHeight - document.getElementById('Stopwatch').offsetHeight - document.getElementById('ButtonsBar').offsetHeight - document.getElementById('Navbar').offsetHeight - 50
     }
 
     const saveLaps = () => {
