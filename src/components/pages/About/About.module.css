@@ -1,0 +1,35 @@
+.About__wrapper {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 30px;
+}
+.About_header {
+    font-weight: 500;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.About_content{
+    font-weight: lighter;
+    font-size: 22px;
+    margin-bottom: 30px;
+    
+}
+.About_contacts {
+    margin-top: auto;
+}
+.About_contacts {
+    display: flex;
+    margin-top: 12px;
+}
+.About_contacts a{
+    color: rgb(197, 197, 197);
+    margin-right: 5px;
+}
+.About_contacts a:hover{
+    color: rgb(255, 255, 255);
+}
+.Contact_line {
+    border: #505050 solid 1px;
+}

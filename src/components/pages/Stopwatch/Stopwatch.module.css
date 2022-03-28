@@ -1,4 +1,5 @@
 .ButtonsBar{
+    font-weight: lighter;
     color: #c3c3c3;
     display: flex;
     justify-content: center;
