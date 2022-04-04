@@ -1,0 +1,13 @@
+.ant-btn:hover, .ant-btn:focus {
+    color: #ffffff;
+    border-color: #ffffff;
+    background: transparent;
+}
+.modalFormSaveLaps {
+    font-size: 16px;
+    color: white;
+}
+.modalSaveBtn {
+    float: right;
+    margin-top: 25px;
+}

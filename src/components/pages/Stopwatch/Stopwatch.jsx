@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Button from '../../../UI/Button/Button';
+import Modal  from '../../../UI/Modal/Modal';
 import ButtonsBar from '../../ButtonsBar';
 import LapsList from '../../LapsList/LapsList';
+import SaveLapsModal from '../../SaveLapsModal/SaveLapsModal';
 import classes from './Stopwatch.module.css'
 
 const Stopwatch = () => {
@@ -14,6 +16,9 @@ const Stopwatch = () => {
     });
     const [startTime, setStartTime] = useState(null);
     const [laps, setLaps] = useState([]);
+
+    const [modalActive, setModalActive] = useState(false);
+    
 
     useEffect(() => {
 
@@ -85,6 +90,9 @@ const Stopwatch = () => {
         changeIsRunningState()
     }
 
+    const openModal = () => {
+        setModalActive(true)
+    }
 
     return <div>
         <div className={classes.DigitalClockFace__wrapper} id='Stopwatch'>
@@ -107,11 +115,14 @@ const Stopwatch = () => {
             <Button onClick={clearLaps}>ClearLaps</Button>
         </div>
         <div style={{ textAlign: 'center' }}>
-            {(laps.length > 0) 
-                ? <LapsList laps={laps}></LapsList>
+            {(laps.length > 0)
+                ? <LapsList laps={laps} openModal={openModal}></LapsList>
                 : <div></div>
             }
         </div>
+        <Modal active={modalActive} setActive={setModalActive}>
+            <SaveLapsModal setActive={setModalActive}></SaveLapsModal>
+        </Modal>
 
     </div>;
 };

@@ -15,7 +15,37 @@
     margin: 25px 10px 0 10px;
     text-decoration: underline 0.15em rgba(0, 0, 0, 0);
     transition: text-decoration-color 300ms;
-}
+} 
+
+
 .Navbar > a:hover{
     text-decoration-color: rgb(255, 255, 255);
 }
+
+
+/* .Navbar > a {
+    position: relative;
+    display: block;
+    padding: 16px 0;
+    margin: 0 12px;
+    letter-spacing: 1px;
+    line-height: 16px;
+    color: rgb(255, 255, 255);
+}
+.Navbar > a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: color 0.1s,transform 0.2s ease-out;
+}
+.Navbar > a:hover::before, .Navbar > a:focus::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+} */

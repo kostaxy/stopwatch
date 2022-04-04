@@ -8,7 +8,7 @@ import { SaveOutlined } from '@ant-design/icons';
 import { getElementError } from '@testing-library/react';
 
 
-const LapsList = ({ laps }) => {
+const LapsList = ({ laps, openModal }) => {
 
     let clLapNum = [classes.Lap__content, classes.Number].join(' ')
     let clLapTime = [classes.Lap__content, classes.Time].join(' ')
@@ -76,21 +76,10 @@ const LapsList = ({ laps }) => {
         return window.innerHeight - document.getElementById('Stopwatch').offsetHeight - document.getElementById('ButtonsBar').offsetHeight - document.getElementById('Navbar').offsetHeight - 50
     }
 
-    const saveLaps = () => {
-        let text;
-        let lapsSetName = prompt("Enter the name of the laps set");
-        if (lapsSetName == null || lapsSetName == "") {
-            text = "Ooops, wrong name. Try save again";
-        } else {
-            text = lapsSetName + ' saved';
-        }
-        alert(text)
-    }
-
     return (
         <div className={classes.LapsTab}>
             <div >
-                <Button className={classes.SaveLapsBtn} onClick={saveLaps} icon={<SaveOutlined />}>
+                <Button className={classes.SaveLapsBtn} onClick={openModal} icon={<SaveOutlined />}>
                     Save laps
                 </Button>
             </div>
