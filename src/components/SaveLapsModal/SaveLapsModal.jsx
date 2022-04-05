@@ -8,20 +8,31 @@ const SaveLapsModal = ({ setActive }) => {
 
     const inputRef = useRef()
 
+    const [emptyInputAttention, setEmptyInputAttention] = useState(false)
+
     const saveLaps = () => {
         if (inputRef.current.value === '') {
-            console.log('not save')
+            activeAttentionEmptyInput()
         } else {
-            console.log('save')
             inputRef.current.value = ''
             setActive(false)
         }
+    }
+
+    const activeAttentionEmptyInput = () => {
+        setEmptyInputAttention(true)
+        setTimeout(() => {
+            setEmptyInputAttention(false)
+          }, 1000);
     }
 
     return (
         <form className='modalFormSaveLaps'>
             <div className='modalInputDescrition'>Enter the name of the result of the laps to save: </div>
             <Input
+                style={{
+                    borderBottom: emptyInputAttention ? 'rgba(255,75,75,1) solid 2px' : 'rgba(255,255,255,1) solid 2px',
+                  }}
                 ref={inputRef}
                 type="text"
                 placeholder='name of the result of the laps'
