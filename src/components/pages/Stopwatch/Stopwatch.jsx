@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Button from '../../../UI/Button/Button';
 import Modal  from '../../../UI/Modal/Modal';
 import ButtonsBar from '../../ButtonsBar';
@@ -7,6 +8,9 @@ import SaveLapsModal from '../../SaveLapsModal/SaveLapsModal';
 import classes from './Stopwatch.module.css'
 
 const Stopwatch = () => {
+
+    const dispatch = useDispatch()
+    const cash = useSelector(state => state.lapsReducer.cash)
 
     const [isRunning, setIsRunning] = useState(false);
     const [time, setTime] = useState({
