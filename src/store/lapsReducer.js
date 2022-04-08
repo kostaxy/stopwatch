@@ -2,15 +2,12 @@
 const defaultState = 
     {
         laps: [],
-        savedLaps: {
-            name: '',
-            laps: []
-        }
+        savedLaps: []
     }
 
 
 const SET_CURRENT_LAPS = "SET_CURRENT_LAPS"
-const SET_SAVED_LAPS = "SET_SAVED_LAPS"
+const ADD_SAVED_LAPS = "ADD_SAVED_LAPS"
 
 export const lapsReducer = (state = defaultState, action) => {
     switch (action.type) {
@@ -18,8 +15,8 @@ export const lapsReducer = (state = defaultState, action) => {
         case SET_CURRENT_LAPS:
             return {...state, laps: action.payload}
 
-        case SET_SAVED_LAPS:
-            return {...state, savedLaps: action.payload}
+        case ADD_SAVED_LAPS:
+            return {...state, savedLaps: [...state.savedLaps, action.payload]}
 
         default:
             return state
@@ -27,4 +24,4 @@ export const lapsReducer = (state = defaultState, action) => {
 }
 
 export const setCurrentLapsAction = (payload) => ({ type: SET_CURRENT_LAPS, payload })
-export const setSavedLapsAction = (payload) => ({ type: SET_SAVED_LAPS, payload }) 
+export const addSavedLapsAction = (payload) => ({ type: ADD_SAVED_LAPS, payload }) 

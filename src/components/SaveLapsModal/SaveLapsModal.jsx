@@ -1,21 +1,41 @@
 import { Button } from 'antd'
 import React, {useState, useRef} from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { addSavedLapsAction, setSavedLapsAction } from '../../store/lapsReducer'
 import Input from '../../UI/Input/Input'
 import classes from '../SaveLapsModal/SaveLapsModal.css'
 
 
 const SaveLapsModal = ({ setActive }) => {
 
+    const dispatch = useDispatch()
+
+    const savedLaps = useSelector(state => state.lapsReducer.saveLaps)
+    const addSavedLaps = (savedLap) => {
+        dispatch(addSavedLapsAction(savedLap))
+    }
+    const laps = useSelector(state => state.lapsReducer.laps)
+    
+
     const inputRef = useRef()
 
     const [emptyInputAttention, setEmptyInputAttention] = useState(false)
 
     const saveLaps = () => {
+        //error
         if (inputRef.current.value === '') {
             activeAttentionEmptyInput()
-        } else {
+        }
+        //its ok
+        else {
+            let savedLap = {
+                name: inputRef.current.value,
+                laps: laps
+            };
+            addSavedLaps(savedLap);
             inputRef.current.value = ''
             setActive(false)
+            savedLap = {};
         }
     }
 

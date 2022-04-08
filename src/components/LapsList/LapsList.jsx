@@ -10,8 +10,6 @@ import { getElementError } from '@testing-library/react';
 
 const LapsList = ({ laps, openModal }) => {
 
-    let clLapNum = [classes.Lap__content, classes.Number].join(' ')
-    let clLapTime = [classes.Lap__content, classes.Time].join(' ')
 
     const columns = [
         {
