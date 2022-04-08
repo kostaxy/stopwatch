@@ -73,7 +73,11 @@ const LapsList = ({ laps, openModal }) => {
     // const data = laps
 
     const calculateHeightLapsTab = () => {
-        return window.innerHeight - document.getElementById('Stopwatch').offsetHeight - document.getElementById('ButtonsBar').offsetHeight - document.getElementById('Navbar').offsetHeight - 50
+        try {
+            return window.innerHeight - document.getElementById('Stopwatch').offsetHeight - document.getElementById('ButtonsBar').offsetHeight - document.getElementById('Navbar').offsetHeight - 50
+        } catch (error) {
+            return 500
+        }
     }
 
     return (
@@ -90,8 +94,6 @@ const LapsList = ({ laps, openModal }) => {
                     columns={columns}
                     dataSource={data}
                     pagination={false}
-                // scroll={{ y: calculateHeightLapsTab() }}
-                // scroll={{ y:  'calc(100vh - 500px)' }}
                 />
             </SimpleBar>
 

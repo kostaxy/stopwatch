@@ -6,20 +6,35 @@ import ButtonsBar from '../../ButtonsBar';
 import LapsList from '../../LapsList/LapsList';
 import SaveLapsModal from '../../SaveLapsModal/SaveLapsModal';
 import classes from './Stopwatch.module.css'
+import { setIsRunningAction, setStartTimeAction, setTimeAction } from '../../../store/timeReducer';
+import { setSavedLapsAction, setCurrentLapsAction } from '../../../store/lapsReducer';
 
 const Stopwatch = () => {
 
     const dispatch = useDispatch()
-    const cash = useSelector(state => state.lapsReducer.cash)
 
-    const [isRunning, setIsRunning] = useState(false);
-    const [time, setTime] = useState({
-        milliseconds: 0,
-        seconds: 0,
-        minutes: 0
-    });
-    const [startTime, setStartTime] = useState(null);
-    const [laps, setLaps] = useState([]);
+
+    const time = useSelector(state => state.timeReducer.time)
+    const setTime = (timeObj) => {
+        dispatch(setTimeAction(timeObj))
+    }
+    
+    const isRunning = useSelector(state => state.timeReducer.isRunning)
+    const setIsRunning = (isRunning) => {
+        dispatch(setIsRunningAction(isRunning))
+    }
+    
+    const startTime = useSelector(state => state.timeReducer.startTime)
+    const setStartTime = (startTime) => {
+        dispatch(setStartTimeAction(startTime))
+    }
+
+    const laps = useSelector(state => state.lapsReducer.laps)
+    const setLaps = (laps) => {
+        dispatch(setCurrentLapsAction(laps))
+    }
+    
+    // const [laps, setLaps] = useState([]);
 
     const [modalActive, setModalActive] = useState(false);
     
