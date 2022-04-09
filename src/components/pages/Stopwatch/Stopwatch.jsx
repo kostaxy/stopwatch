@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Button from '../../../UI/Button/Button';
 import Modal  from '../../../UI/Modal/Modal';
-import ButtonsBar from '../../ButtonsBar';
 import LapsList from '../../LapsList/LapsList';
 import SaveLapsModal from '../../SaveLapsModal/SaveLapsModal';
 import classes from './Stopwatch.module.css'
@@ -20,6 +19,7 @@ const Stopwatch = () => {
     }
     
     const isRunning = useSelector(state => state.timeReducer.isRunning)
+    
     const setIsRunning = (isRunning) => {
         dispatch(setIsRunningAction(isRunning))
     }

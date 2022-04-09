@@ -4,7 +4,7 @@
     margin-bottom: 10px;
 }
 
-@media (max-width: 690px) {
+@media (min-width: 690px){
     .LapsTab{
         width: 400px;
         margin: auto;
@@ -12,9 +12,21 @@
         display: flex;
     }
 }
-@media (min-width: 690px) {
+
+@media (max-width: 690px){
     .LapsTab{
-        width: 600px;
+        width: 400px;
+        margin: auto;
+        flex-flow: column;
+        display: flex;
+    }
+}
+
+@media (max-width: 400px) {
+    .LapsTab{
+        width: auto;
+        padding-left: 10px;
+        padding-right: 10px;
         margin: auto;
         flex-flow: column;
         display: flex;

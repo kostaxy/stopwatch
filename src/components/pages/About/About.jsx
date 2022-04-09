@@ -12,7 +12,7 @@ const About = () => {
         This web application was created by
         <a href='https://github.com/kostaxy'> @kostaxy</a>.
         The main goals were training to work with time and react.
-        <br />The project was created using react, antd libraries.
+        <br />The project was created using react, redux, antd libraries.
       </div>
       <hr className={classes.Contact_line} />
     

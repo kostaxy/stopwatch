@@ -14,7 +14,6 @@
     font-weight: lighter;
     font-size: 22px;
     margin-bottom: 30px;
-    
 }
 .About_contacts {
     margin-top: auto;
@@ -32,4 +31,46 @@
 }
 .Contact_line {
     border: #505050 solid 1px;
+}
+
+@media (min-width: 690) {
+    .About_header {
+        font-weight: 500;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    .About_content{
+        font-weight: lighter;
+        font-size: 22px;
+        margin-bottom: 30px;
+        
+    }
+}
+
+@media (max-width: 690px) {
+    .About_header {
+        font-weight: 500;
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+    .About_content{
+        font-weight: lighter;
+        font-size: 18px;
+        margin-bottom: 30px;
+        
+    }
+}
+
+@media (max-width: 400px) {
+    .About_header {
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .About_content{
+        font-weight: lighter;
+        font-size: 16px;
+        margin-bottom: 30px;
+        
+    }
 }

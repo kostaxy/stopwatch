@@ -42,3 +42,15 @@
         color: #fff;
     }
 }
+@media (max-width: 500px) {
+    .DigitalClockFace{
+        font-size: 80px;
+        color: #fff;
+    }
+}
+@media (max-width: 350px) {
+    .DigitalClockFace{
+        font-size: 60px;
+        color: #fff;
+    }
+}

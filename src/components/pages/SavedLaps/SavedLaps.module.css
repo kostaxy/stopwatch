@@ -1,18 +1,45 @@
-
 @media (max-width: 690px) {
-    .LapsTab{
+    .LapsTab {
         width: 400px;
         margin: auto;
         flex-flow: column;
         display: flex;
     }
+
+    .LapsTitle {
+        font-size: 16px !important;
+    }
+
+    .NoLapsTitle {
+        font-size: 16px !important;
+        margin-top: 10px !important;
+    }
+
+    .Slider__wrapper {
+        margin-top: 10px
+    }
 }
+
+@media (max-width: 400px) {
+    .LapsTab {
+        width: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: auto;
+        flex-flow: column;
+        display: flex;
+    }
+}
+
 @media (min-width: 690px) {
-    .LapsTab{
+    .LapsTab {
         width: 600px;
         margin: auto;
         flex-flow: column;
         display: flex;
+    }
+    .Slider__wrapper {
+        margin-top: 30px
     }
 }
 
@@ -21,9 +48,15 @@
     text-align: center;
     font-weight: lighter;
 }
+
+
 .NoLapsTitle {
     font-size: 24px;
     text-align: center;
     margin-top: 30px;
     font-weight: lighter;
+}
+
+.Slider__wrapper {
+    width: 100%;
 }

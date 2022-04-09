@@ -1,7 +1,7 @@
 import { Button } from 'antd'
 import React, {useState, useRef} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addSavedLapsAction, setSavedLapsAction } from '../../store/lapsReducer'
+import { addSavedLapAction } from '../../store/lapsReducer'
 import Input from '../../UI/Input/Input'
 import classes from '../SaveLapsModal/SaveLapsModal.css'
 
@@ -12,7 +12,7 @@ const SaveLapsModal = ({ setActive }) => {
 
     const savedLaps = useSelector(state => state.lapsReducer.saveLaps)
     const addSavedLaps = (savedLap) => {
-        dispatch(addSavedLapsAction(savedLap))
+        dispatch(addSavedLapAction(savedLap))
     }
     const laps = useSelector(state => state.lapsReducer.laps)
     
@@ -47,7 +47,7 @@ const SaveLapsModal = ({ setActive }) => {
     }
 
     return (
-        <form className='modalFormSaveLaps'>
+        <div className='modalFormSaveLaps'>
             <div className='modalInputDescrition'>Enter the name of the result of the laps to save: </div>
             <Input
                 style={{
@@ -61,7 +61,7 @@ const SaveLapsModal = ({ setActive }) => {
             <Button onClick={saveLaps} className='modalSaveBtn'>
                 save
             </Button>
-        </form>
+        </div>
     )
 }
 
