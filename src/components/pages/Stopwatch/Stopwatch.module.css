@@ -1,5 +1,5 @@
 .ButtonsBar{
-    font-weight: lighter;
+    font-weight: 200;
     color: #c3c3c3;
     display: flex;
     justify-content: center;
@@ -24,33 +24,33 @@
     color: #fff;
 } */
 
-@media (max-width: 920px){
+@media (max-width: 1120px){
     .DigitalClockFace{
-        font-size: 150px;
+        font-size: 125px;
         color: #fff;
     }
 }
-@media (min-width: 920px) {
+@media (min-width: 1120px) {
     .DigitalClockFace{
-        font-size: 210px;
+        font-size: 220px;
         color: #fff;
     }
 }
 @media (max-width: 690px) {
     .DigitalClockFace{
-        font-size: 110px;
+        font-size: 85px;
         color: #fff;
     }
 }
 @media (max-width: 500px) {
     .DigitalClockFace{
-        font-size: 80px;
+        font-size: 60px;
         color: #fff;
     }
 }
 @media (max-width: 350px) {
     .DigitalClockFace{
-        font-size: 60px;
+        font-size: 45px;
         color: #fff;
     }
 }
